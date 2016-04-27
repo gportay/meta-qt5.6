@@ -23,6 +23,7 @@ SRC_URI += "\
     file://0007-linux-oe-g-Invert-conditional-for-defining-QT_SOCKLE.patch \
     file://0008-configure-paths-for-target-qmake-properly.patch \
     file://0009-Pretend-Qt5-wasn-t-found-if-OE_QMAKE_PATH_EXTERNAL_H.patch \
+    file://0011-Reorder-EGL-libraries-from-pkgconfig-and-defaults.patch \
 "
 
 DEPENDS += "qtbase-native"
