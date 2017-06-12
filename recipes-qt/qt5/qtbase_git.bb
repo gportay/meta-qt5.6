@@ -133,6 +133,7 @@ PACKAGECONFIG[libproxy] = "-libproxy,-no-libproxy,libproxy"
 PACKAGECONFIG[libinput] = "-libinput,-no-libinput,libinput"
 
 QT_CONFIG_FLAGS += " \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'ld-is-gold', '-use-gold-linker', '-no-use-gold-linker', d)} \
     -shared \
     -silent \
     -no-pch \
