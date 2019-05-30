@@ -27,6 +27,7 @@ SRC_URI += "\
     file://0007-linux-oe-g-Invert-conditional-for-defining-QT_SOCKLE.patch \
     file://0008-configure-paths-for-target-qmake-properly.patch \
     file://0009-Pretend-Qt5-wasn-t-found-if-OE_QMAKE_PATH_EXTERNAL_H.patch \
+    file://0017-Fix-Wdeprecated-copy-warnings.patch \
 "
 
 # common for qtbase-native and nativesdk-qtbase
@@ -35,6 +36,8 @@ SRC_URI += "\
 SRC_URI += " \
     file://0010-Always-build-uic.patch \
     file://0011-Add-external-hostbindir-option-for-native-sdk.patch \
+    file://0018-Always-build-uic-and-qvkgen.patch \
+    file://0019-Avoid-renameeat2-for-native-sdk-builds.patch \
 "
 
 CLEANBROKEN = "1"
