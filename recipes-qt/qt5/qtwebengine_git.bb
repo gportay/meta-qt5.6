@@ -50,7 +50,7 @@ COMPATIBLE_MACHINE:armv7ve = "(.*)"
 
 inherit qmake5
 inherit gettext
-inherit pythonnative
+inherit python3native
 inherit perlnative
 
 # we don't want gettext.bbclass to append --enable-nls
