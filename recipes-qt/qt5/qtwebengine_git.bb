@@ -23,6 +23,8 @@ DEPENDS += " \
 # xscreensaver isn't covered in qtbase DEPENDS
 DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'libxscrnsaver', '', d)}"
 
+inherit pkgconfig
+
 DEPENDS += "yasm-native"
 EXTRA_QMAKEVARS_PRE += "GYP_CONFIG+=use_system_yasm"
 
