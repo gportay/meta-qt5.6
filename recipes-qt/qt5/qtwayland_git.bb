@@ -1,6 +1,8 @@
 require qt5.inc
 require qt5-git.inc
 
+inherit pkgconfig
+
 # There are no LGPLv3-only licensed files in this component.
 LICENSE = "BSD-3-Clause & (LGPL-2.1 & The-Qt-Company-Qt-LGPL-Exception-1.1 | LGPL-3.0)"
 LIC_FILES_CHKSUM = " \
