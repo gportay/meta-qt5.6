@@ -24,6 +24,7 @@ SRC_URI += "\
     file://0008-configure-paths-for-target-qmake-properly.patch \
     file://0009-Pretend-Qt5-wasn-t-found-if-OE_QMAKE_PATH_EXTERNAL_H.patch \
     file://0011-Reorder-EGL-libraries-from-pkgconfig-and-defaults.patch \
+    file://0023-Remove-unsetting-_FILE_OFFSET_BITS.patch \
 "
 
 DEPENDS += "qtbase-native"
