@@ -184,7 +184,7 @@ do_configure() {
         ln -sf ${OE_QMAKE_QMAKE_ORIG} ${B}/bin/qmake
     fi
 
-    ${S}/configure -v \
+    MAKEFLAGS="${PARALLEL_MAKE}" ${S}/configure -v \
         -opensource -confirm-license \
         -sysroot ${STAGING_DIR_TARGET} \
         -no-gcc-sysroot \
