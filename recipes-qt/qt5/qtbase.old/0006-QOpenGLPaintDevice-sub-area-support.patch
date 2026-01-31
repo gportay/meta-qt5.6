@@ -21,7 +21,7 @@ Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
  6 files changed, 23 insertions(+), 3 deletions(-)
 
 diff --git a/src/gui/opengl/qopenglpaintdevice.cpp b/src/gui/opengl/qopenglpaintdevice.cpp
-index 17a32774d82..85425dae499 100644
+index 17a3277..85425da 100644
 --- a/src/gui/opengl/qopenglpaintdevice.cpp
 +++ b/src/gui/opengl/qopenglpaintdevice.cpp
 @@ -135,6 +135,12 @@ QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height)
@@ -50,7 +50,7 @@ index 17a32774d82..85425dae499 100644
      Returns the pixel size of the paint device.
  
 diff --git a/src/gui/opengl/qopenglpaintdevice.h b/src/gui/opengl/qopenglpaintdevice.h
-index 804e4857e9a..88b481ad250 100644
+index 804e485..88b481a 100644
 --- a/src/gui/opengl/qopenglpaintdevice.h
 +++ b/src/gui/opengl/qopenglpaintdevice.h
 @@ -53,12 +53,14 @@ public:
@@ -69,7 +69,7 @@ index 804e4857e9a..88b481ad250 100644
      void setSize(const QSize &size);
      void setDevicePixelRatio(qreal devicePixelRatio);
 diff --git a/src/gui/opengl/qopenglpaintdevice_p.h b/src/gui/opengl/qopenglpaintdevice_p.h
-index 54ea09240d7..f660143fdb4 100644
+index 54ea092..f660143 100644
 --- a/src/gui/opengl/qopenglpaintdevice_p.h
 +++ b/src/gui/opengl/qopenglpaintdevice_p.h
 @@ -65,6 +65,7 @@ public:
@@ -81,7 +81,7 @@ index 54ea09240d7..f660143fdb4 100644
  
      qreal dpmx;
 diff --git a/src/gui/opengl/qopenglpaintengine.cpp b/src/gui/opengl/qopenglpaintengine.cpp
-index 0b92bf4b1da..f41e05985cc 100644
+index 0b92bf4..f41e059 100644
 --- a/src/gui/opengl/qopenglpaintengine.cpp
 +++ b/src/gui/opengl/qopenglpaintengine.cpp
 @@ -2078,7 +2078,10 @@ bool QOpenGL2PaintEngineEx::begin(QPaintDevice *pdev)
@@ -128,7 +128,7 @@ index 0b92bf4b1da..f41e05985cc 100644
  
      funcs.glScissor(left, bottom, width, height);
 diff --git a/src/gui/opengl/qopenglpaintengine_p.h b/src/gui/opengl/qopenglpaintengine_p.h
-index f1ec669ca0a..6d302b86e2e 100644
+index f1ec669..6d302b8 100644
 --- a/src/gui/opengl/qopenglpaintengine_p.h
 +++ b/src/gui/opengl/qopenglpaintengine_p.h
 @@ -264,6 +264,7 @@ public:
@@ -140,7 +140,7 @@ index f1ec669ca0a..6d302b86e2e 100644
      QOpenGLContext *ctx;
      EngineMode mode;
 diff --git a/src/gui/opengl/qopengltextureglyphcache.cpp b/src/gui/opengl/qopengltextureglyphcache.cpp
-index c179143173e..fad68d5e466 100644
+index c179143..fad68d5 100644
 --- a/src/gui/opengl/qopengltextureglyphcache.cpp
 +++ b/src/gui/opengl/qopengltextureglyphcache.cpp
 @@ -310,7 +310,7 @@ void QOpenGLTextureGlyphCache::resizeTextureData(int width, int height)

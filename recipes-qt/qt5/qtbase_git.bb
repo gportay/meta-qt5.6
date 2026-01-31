@@ -11,8 +11,8 @@ LIC_FILES_CHKSUM = " \
 "
 
 # common for qtbase-native, qtbase-nativesdk and qtbase
-# Patches from https://github.com/meta-qt5/qtbase/commits/b5.6-shared
-# 5.6.meta-qt5-shared.9
+# Patches from https://github.com/meta-qt5.6/qtbase/commits/b5.6-shared
+# 5.6.meta-qt5-shared.10
 SRC_URI += "\
     file://0001-Add-linux-oe-g-platform.patch \
     file://0002-qlibraryinfo-allow-to-set-qt.conf-from-the-outside-u.patch \
@@ -23,9 +23,25 @@ SRC_URI += "\
     file://0007-linux-oe-g-Invert-conditional-for-defining-QT_SOCKLE.patch \
     file://0008-configure-paths-for-target-qmake-properly.patch \
     file://0009-Pretend-Qt5-wasn-t-found-if-OE_QMAKE_PATH_EXTERNAL_H.patch \
-    file://0011-Reorder-EGL-libraries-from-pkgconfig-and-defaults.patch \
-    file://0017-Fix-Wdeprecated-copy-warnings.patch \
-    file://0023-Remove-unsetting-_FILE_OFFSET_BITS.patch \
+    file://0010-Delete-qlonglong-and-qulonglong.patch \
+    file://0011-tst_qstring-Disable-Wformat-security-with-clang-as-w.patch \
+    file://0012-Replace-pthread_yield-with-sched_yield.patch \
+    file://0013-Add-OE-specific-specs-for-clang-compiler.patch \
+    file://0014-tst_qlocale-Enable-QT_USE_FENV-only-on-glibc.patch \
+    file://0015-mkspecs-common-gcc-base.conf-Use-I-instead-of-isyste.patch \
+    file://0016-Disable-ltcg-for-host_build.patch \
+    file://0017-Qt5GuiConfigExtras.cmake.in-cope-with-variable-path-.patch \
+    file://0018-corelib-Include-sys-types.h-for-uint32_t.patch \
+    file://0019-Fix-Wdeprecated-copy-warnings.patch \
+    file://0020-qfloat16-Include-limits-header.patch \
+    file://0021-zlib-Do-not-undefine-_FILE_OFFSET_BITS.patch \
+    file://0022-evdevkeyboard-fix-input_event-time-related-compile.patch \
+    file://0023-tst_qpainter-FE_-macros-are-not-defined-for-every-pl.patch \
+    file://0024-tst_QPluginLoader-Simplify-creating-a-fake-pointer-i.patch \
+    file://0025-rcc-Just-dcument-file-name-without-full-path-to-redu.patch \
+    file://0026-testlib-don-t-track-the-build-or-source-directories.patch \
+    file://0027-Always-build-uic.patch \
+    file://0028-Add-external-hostbindir-option-for-native-sdk.patch \
 "
 
 DEPENDS += "qtbase-native"

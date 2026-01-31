@@ -13,7 +13,7 @@ Signed-off-by: Khem Raj <raj.khem@gmail.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/mkspecs/linux-oe-g++/qplatformdefs.h b/mkspecs/linux-oe-g++/qplatformdefs.h
-index dd1200361e0..86236512f80 100644
+index dd12003..8623651 100644
 --- a/mkspecs/linux-oe-g++/qplatformdefs.h
 +++ b/mkspecs/linux-oe-g++/qplatformdefs.h
 @@ -86,10 +86,10 @@

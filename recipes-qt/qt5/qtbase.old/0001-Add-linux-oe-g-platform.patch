@@ -47,16 +47,16 @@ Upstream-Status: Inappropriate [embedded specific]
 Change-Id: I0591ed5da0d61d7cf1509d420e6b293582f1863c
 Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
 ---
- configure                            |  71 ++++++++++++-------
+ configure                            |  71 ++++++++++++++++---------
  mkspecs/features/configure.prf       |   4 +-
- mkspecs/linux-oe-g++/qmake.conf      |  42 +++++++++++
- mkspecs/linux-oe-g++/qplatformdefs.h | 100 +++++++++++++++++++++++++++
+ mkspecs/linux-oe-g++/qmake.conf      |  42 +++++++++++++++
+ mkspecs/linux-oe-g++/qplatformdefs.h | 100 +++++++++++++++++++++++++++++++++++
  4 files changed, 189 insertions(+), 28 deletions(-)
  create mode 100644 mkspecs/linux-oe-g++/qmake.conf
  create mode 100644 mkspecs/linux-oe-g++/qplatformdefs.h
 
 diff --git a/configure b/configure
-index 6ebeab30fe3..9e552c60eb6 100755
+index 6ebeab3..9e552c6 100755
 --- a/configure
 +++ b/configure
 @@ -343,6 +343,16 @@ getQMakeConf()
@@ -189,7 +189,7 @@ index 6ebeab30fe3..9e552c60eb6 100755
          if [ "$BUILD_ON_MAC" = "yes" ]; then
              echo "COCOA_LFLAGS =-framework Foundation -framework CoreServices" >>"$mkfile"
 diff --git a/mkspecs/features/configure.prf b/mkspecs/features/configure.prf
-index a3ec227eeeb..eef6006b25b 100644
+index a3ec227..eef6006 100644
 --- a/mkspecs/features/configure.prf
 +++ b/mkspecs/features/configure.prf
 @@ -71,12 +71,12 @@ defineTest(qtCompileTest) {
@@ -209,7 +209,7 @@ index a3ec227eeeb..eef6006b25b 100644
              write_file($$QMAKE_CONFIG_LOG, msg, append)
 diff --git a/mkspecs/linux-oe-g++/qmake.conf b/mkspecs/linux-oe-g++/qmake.conf
 new file mode 100644
-index 00000000000..311ba0460e0
+index 0000000..311ba04
 --- /dev/null
 +++ b/mkspecs/linux-oe-g++/qmake.conf
 @@ -0,0 +1,42 @@
@@ -257,7 +257,7 @@ index 00000000000..311ba0460e0
 +load(qt_config)
 diff --git a/mkspecs/linux-oe-g++/qplatformdefs.h b/mkspecs/linux-oe-g++/qplatformdefs.h
 new file mode 100644
-index 00000000000..dd1200361e0
+index 0000000..dd12003
 --- /dev/null
 +++ b/mkspecs/linux-oe-g++/qplatformdefs.h
 @@ -0,0 +1,100 @@

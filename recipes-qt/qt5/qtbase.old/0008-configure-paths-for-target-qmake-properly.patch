@@ -19,7 +19,7 @@ Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
  1 file changed, 19 insertions(+), 4 deletions(-)
 
 diff --git a/configure b/configure
-index df089f26695..224f9f52a6f 100755
+index df089f2..224f9f5 100755
 --- a/configure
 +++ b/configure
 @@ -3904,8 +3904,13 @@ if [ "$CFG_COMPILE_EXAMPLES" = "yes" ]; then

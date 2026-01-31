@@ -68,7 +68,7 @@ Signed-off-by: Jonathan Liu <net147@gmail.com>
  2 files changed, 14 insertions(+), 1 deletion(-)
 
 diff --git a/mkspecs/features/qt.prf b/mkspecs/features/qt.prf
-index ddf99da3031..9596b87ab60 100644
+index ddf99da..9596b87 100644
 --- a/mkspecs/features/qt.prf
 +++ b/mkspecs/features/qt.prf
 @@ -318,6 +318,19 @@ contains(TEMPLATE, .*app) {
@@ -92,7 +92,7 @@ index ddf99da3031..9596b87ab60 100644
  contains(QT_CONFIG, static) {
      QT_PLUGIN_VERIFY += QTPLUGIN
 diff --git a/mkspecs/features/qt_common.prf b/mkspecs/features/qt_common.prf
-index 08b3f3e5af4..8a667f39cc6 100644
+index 08b3f3e..8a667f3 100644
 --- a/mkspecs/features/qt_common.prf
 +++ b/mkspecs/features/qt_common.prf
 @@ -38,7 +38,7 @@ contains(TEMPLATE, .*lib) {

@@ -1,0 +1,27 @@
+From 1f9eeb7c61dbf81e0d930eca21581f0cb1abbf6b Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Thu, 6 Dec 2018 11:47:52 -0800
+Subject: [PATCH] corelib: Include sys/types.h for uint32_t
+
+This has been includes indirectly on glibc/linux systems
+via inttypes.h -> stdint.h -> sys/types.h but it breaks on
+musl where this indirect include chain does not exist.
+
+Upstream-Status: Pending
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+---
+ src/corelib/global/qnumeric_p.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/corelib/global/qnumeric_p.h b/src/corelib/global/qnumeric_p.h
+index b18d521d053..6c1874f4510 100644
+--- a/src/corelib/global/qnumeric_p.h
++++ b/src/corelib/global/qnumeric_p.h
+@@ -49,6 +49,7 @@
+ #include "QtCore/qglobal.h"
+ 
+ #include <limits>
++#include <sys/types.h>
+ 
+ #if defined(Q_CC_MSVC) && !defined(Q_OS_WINCE)
+ #  include <intrin.h>

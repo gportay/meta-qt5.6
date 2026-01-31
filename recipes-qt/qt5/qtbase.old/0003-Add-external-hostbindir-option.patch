@@ -37,7 +37,7 @@ Conflicts:
  7 files changed, 38 insertions(+), 12 deletions(-)
 
 diff --git a/configure b/configure
-index 9e552c60eb6..ae724d6b725 100755
+index 9e552c6..ae724d6 100755
 --- a/configure
 +++ b/configure
 @@ -826,6 +826,7 @@ QT_HOST_BINS=
@@ -90,7 +90,7 @@ index 9e552c60eb6..ae724d6b725 100755
  CFG_QCONFIG_PATH=$relpath/src/corelib/global/qconfig-${CFG_QCONFIG}.h
  case "$CFG_QCONFIG" in
 diff --git a/mkspecs/features/qt_functions.prf b/mkspecs/features/qt_functions.prf
-index 4a1d265a8b7..a2bdd299580 100644
+index 4a1d265..a2bdd29 100644
 --- a/mkspecs/features/qt_functions.prf
 +++ b/mkspecs/features/qt_functions.prf
 @@ -70,7 +70,11 @@ defineTest(qtHaveModule) {
@@ -107,7 +107,7 @@ index 4a1d265a8b7..a2bdd299580 100644
              cmd = perl -w $$system_path($${cmd}.pl)
          } else: contains(QMAKE_HOST.os, Windows) {
 diff --git a/mkspecs/features/qt_tool.prf b/mkspecs/features/qt_tool.prf
-index 839c3d6b887..45934a060a1 100644
+index 839c3d6..45934a0 100644
 --- a/mkspecs/features/qt_tool.prf
 +++ b/mkspecs/features/qt_tool.prf
 @@ -14,10 +14,11 @@ load(qt_app)
@@ -125,7 +125,7 @@ index 839c3d6b887..45934a060a1 100644
  
      !host_build|!force_bootstrap: MODULE_DEPENDS = $$replace(QT, -private$, _private)
 diff --git a/qtbase.pro b/qtbase.pro
-index 78f9b3a86c0..f4b7fc42ee8 100644
+index 78f9b3a..f4b7fc4 100644
 --- a/qtbase.pro
 +++ b/qtbase.pro
 @@ -37,12 +37,16 @@ CONFIG -= qt
@@ -159,7 +159,7 @@ index 78f9b3a86c0..f4b7fc42ee8 100644
  
  # If we are doing a prefix build, create a "module" pri which enables
 diff --git a/src/corelib/Qt5CoreConfigExtras.cmake.in b/src/corelib/Qt5CoreConfigExtras.cmake.in
-index 91a4eb619a1..25df27c930f 100644
+index 91a4eb6..25df27c 100644
 --- a/src/corelib/Qt5CoreConfigExtras.cmake.in
 +++ b/src/corelib/Qt5CoreConfigExtras.cmake.in
 @@ -5,7 +5,7 @@ if (NOT TARGET Qt5::qmake)
@@ -190,7 +190,7 @@ index 91a4eb619a1..25df27c930f 100644
      _qt5_Core_check_file_exists(${imported_location})
  
 diff --git a/src/dbus/Qt5DBusConfigExtras.cmake.in b/src/dbus/Qt5DBusConfigExtras.cmake.in
-index 1d947159e2e..301af8f1b24 100644
+index 1d94715..301af8f 100644
 --- a/src/dbus/Qt5DBusConfigExtras.cmake.in
 +++ b/src/dbus/Qt5DBusConfigExtras.cmake.in
 @@ -5,7 +5,7 @@ if (NOT TARGET Qt5::qdbuscpp2xml)
@@ -212,7 +212,7 @@ index 1d947159e2e..301af8f1b24 100644
      _qt5_DBus_check_file_exists(${imported_location})
  
 diff --git a/src/widgets/Qt5WidgetsConfigExtras.cmake.in b/src/widgets/Qt5WidgetsConfigExtras.cmake.in
-index 99d87e2e46f..5621dc0faec 100644
+index 99d87e2..5621dc0 100644
 --- a/src/widgets/Qt5WidgetsConfigExtras.cmake.in
 +++ b/src/widgets/Qt5WidgetsConfigExtras.cmake.in
 @@ -5,7 +5,7 @@ if (NOT TARGET Qt5::uic)

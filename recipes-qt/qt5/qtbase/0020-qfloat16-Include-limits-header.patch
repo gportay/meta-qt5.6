@@ -1,0 +1,46 @@
+From 14b6f2582ec9c4d9f48ffef2b0ee73d65be803a1 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Tue, 2 Mar 2021 13:18:47 -0800
+Subject: [PATCH] qfloat16: Include <limits> header
+
+gcc11 complains
+ error: 'numeric_limits' is not a class template
+ |   344 | template<> class numeric_limits<const QT_PREPEND_NAMESPACE(qfloat16)>
+
+This is because its missing right header which perhaps is included
+implicitly in older compilers
+
+Change-Id: I29fa715399e4aa4686d01a2385fcde4ac6860cc0
+Upstream-Status: Pending
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ src/corelib/tools/qbytearraymatcher.h | 1 +
+ src/tools/moc/generator.cpp           | 2 ++
+ 2 files changed, 3 insertions(+)
+
+diff --git a/src/corelib/tools/qbytearraymatcher.h b/src/corelib/tools/qbytearraymatcher.h
+index 5b7c6738db3..66c0a4b55b1 100644
+--- a/src/corelib/tools/qbytearraymatcher.h
++++ b/src/corelib/tools/qbytearraymatcher.h
+@@ -34,6 +34,7 @@
+ #ifndef QBYTEARRAYMATCHER_H
+ #define QBYTEARRAYMATCHER_H
+ 
++#include <limits>
+ #include <QtCore/qbytearray.h>
+ 
+ QT_BEGIN_NAMESPACE
+diff --git a/src/tools/moc/generator.cpp b/src/tools/moc/generator.cpp
+index 99629f0427b..2cfea513e97 100644
+--- a/src/tools/moc/generator.cpp
++++ b/src/tools/moc/generator.cpp
+@@ -41,6 +41,8 @@
+ #include <QtCore/qjsonvalue.h>
+ #include <QtCore/qjsonarray.h>
+ #include <QtCore/qplugin.h>
++
++#include <limits>
+ #include <stdio.h>
+ 
+ #include <private/qmetaobject_p.h> //for the flags.
